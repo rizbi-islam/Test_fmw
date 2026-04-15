@@ -1,0 +1,3 @@
+2026-04-15 17:00:18.144 | INFO     | core.test_cases.excel_parser:parse:28 - [ExcelParser] Parsing: assets/templates/test_suite.xlsx | Sheet: TestSuite
+2026-04-15 17:00:18.209 | SUCCESS  | core.test_cases.excel_parser:parse:43 - [ExcelParser] Parsed 3 test cases (2 enabled)
+2026-04-15 17:00:18.209 | INFO     | core.test_cases.test_case_registry:register_suite:30 - [TestCaseRegistry] Registered suite 'Excel Test Suite' with 3 test cases.

@@ -1,0 +1,120 @@
+2026-04-12 10:51:00.425 | INFO     | core.test_cases.excel_parser:parse:28 - [ExcelParser] Parsing: assets/templates/test_suite.xlsx | Sheet: TestSuite
+2026-04-12 10:51:00.434 | SUCCESS  | core.test_cases.excel_parser:parse:43 - [ExcelParser] Parsed 3 test cases (2 enabled)
+2026-04-12 10:51:00.434 | INFO     | core.test_cases.test_case_registry:register_suite:30 - [TestCaseRegistry] Registered suite 'Excel Test Suite' with 3 test cases.
+2026-04-12 10:51:00.442 | INFO     | core.flow.flow_executor:run:71 - 
+############################################################
+2026-04-12 10:51:00.443 | INFO     | core.flow.flow_executor:run:72 -   Suite  : Excel Test Suite
+2026-04-12 10:51:00.443 | INFO     | core.flow.flow_executor:run:73 -   Total  : 2 | Enabled: 2
+2026-04-12 10:51:00.444 | INFO     | core.flow.flow_executor:run:74 -   Driver : selenium
+2026-04-12 10:51:00.444 | INFO     | core.flow.flow_executor:run:75 - ############################################################
+
+2026-04-12 10:51:01.233 | DEBUG    | core.drivers.driver_factory:register:22 - [DriverFactory] Registered driver: 'selenium'
+2026-04-12 10:51:01.233 | DEBUG    | core.drivers.driver_factory:register:22 - [DriverFactory] Registered driver: 'playwright'
+2026-04-12 10:51:01.233 | INFO     | core.drivers.driver_factory:get:35 - [DriverFactory] Creating driver: 'selenium'
+2026-04-12 10:51:01.233 | INFO     | core.drivers.selenium_driver:start:47 - [SeleniumDriver] Starting chrome | headless=True
+2026-04-12 10:51:05.459 | ERROR    | core.flow.flow_executor:_run_single:97 - [FlowExecutor] Fatal error in TC001: [WinError 193] %1 is not a valid Win32 application
+Traceback (most recent call last):
+
+  File "E:\kwaf_phase1 (1)\kwaf\run.py", line 126, in <module>
+    main()
+
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\click\core.py", line 1485, in __call__
+    return self.main(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\click\core.py", line 1406, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\click\core.py", line 1269, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\click\core.py", line 824, in invoke
+    return callback(*args, **kwargs)
+
+  File "E:\kwaf_phase1 (1)\kwaf\run.py", line 109, in main
+    suite_result = executor.run(test_cases, suite_name=suite_data.name)
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\flow\flow_executor.py", line 78, in run
+    result = self._run_single(tc)
+
+> File "E:\kwaf_phase1 (1)\kwaf\core\flow\flow_executor.py", line 93, in _run_single
+    driver.start()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 48, in start
+    self.driver = self._build_driver()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 74, in _build_driver
+    return build_fn()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 85, in _build_chrome
+    return webdriver.Chrome(service=service, options=options)
+
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\chromium\webdriver.py", line 50, in __init__
+    self.service.start()
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\common\service.py", line 98, in start
+    self._start_process(self._path)
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\common\service.py", line 208, in _start_process
+    self.process = subprocess.Popen(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1554, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+
+OSError: [WinError 193] %1 is not a valid Win32 application
+2026-04-12 10:51:05.523 | INFO     | core.drivers.driver_factory:get:35 - [DriverFactory] Creating driver: 'selenium'
+2026-04-12 10:51:05.523 | INFO     | core.drivers.selenium_driver:start:47 - [SeleniumDriver] Starting chrome | headless=True
+2026-04-12 10:51:06.673 | ERROR    | core.flow.flow_executor:_run_single:97 - [FlowExecutor] Fatal error in TC002: [WinError 193] %1 is not a valid Win32 application
+Traceback (most recent call last):
+
+  File "E:\kwaf_phase1 (1)\kwaf\run.py", line 126, in <module>
+    main()
+
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\click\core.py", line 1485, in __call__
+    return self.main(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\click\core.py", line 1406, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\click\core.py", line 1269, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\click\core.py", line 824, in invoke
+    return callback(*args, **kwargs)
+
+  File "E:\kwaf_phase1 (1)\kwaf\run.py", line 109, in main
+    suite_result = executor.run(test_cases, suite_name=suite_data.name)
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\flow\flow_executor.py", line 78, in run
+    result = self._run_single(tc)
+
+> File "E:\kwaf_phase1 (1)\kwaf\core\flow\flow_executor.py", line 93, in _run_single
+    driver.start()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 48, in start
+    self.driver = self._build_driver()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 74, in _build_driver
+    return build_fn()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 85, in _build_chrome
+    return webdriver.Chrome(service=service, options=options)
+
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\chromium\webdriver.py", line 50, in __init__
+    self.service.start()
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\common\service.py", line 98, in start
+    self._start_process(self._path)
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\common\service.py", line 208, in _start_process
+    self.process = subprocess.Popen(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1554, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+
+OSError: [WinError 193] %1 is not a valid Win32 application
+2026-04-12 10:51:06.679 | INFO     | core.flow.flow_executor:_print_summary:112 - 
+############################################################
+2026-04-12 10:51:06.680 | INFO     | core.flow.flow_executor:_print_summary:113 -   SUITE RESULT : Excel Test Suite
+2026-04-12 10:51:06.680 | INFO     | core.flow.flow_executor:_print_summary:114 -   Passed  : 0
+2026-04-12 10:51:06.681 | INFO     | core.flow.flow_executor:_print_summary:115 -   Failed  : 0
+2026-04-12 10:51:06.681 | INFO     | core.flow.flow_executor:_print_summary:116 -   Skipped : 0
+2026-04-12 10:51:06.681 | INFO     | core.flow.flow_executor:_print_summary:117 -   Total   : 2
+2026-04-12 10:51:06.682 | INFO     | core.flow.flow_executor:_print_summary:118 - ############################################################
+
+2026-04-12 10:51:06.724 | SUCCESS  | core.reports.html_reporter:generate:163 - [HtmlReporter] Report -> reports/output\report_Excel_Test_Suite_20260412_105106.html

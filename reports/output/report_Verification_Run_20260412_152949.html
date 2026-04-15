@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KWAF Test Report</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f2f5;color:#333;font-size:14px}
+  header{background:linear-gradient(135deg,#1a1a2e,#16213e);color:white;padding:24px 40px}
+  header h1{font-size:22px;margin-bottom:4px}
+  header p{opacity:.65;font-size:13px}
+  .summary{display:flex;gap:12px;padding:20px 40px;background:white;border-bottom:1px solid #e8e8e8;flex-wrap:wrap}
+  .stat{flex:1;min-width:100px;text-align:center;padding:14px 10px;border-radius:10px}
+  .s-total{background:#e3f2fd;color:#1565c0}
+  .s-pass{background:#e8f5e9;color:#1b5e20}
+  .s-fail{background:#ffebee;color:#b71c1c}
+  .s-skip{background:#fff8e1;color:#e65100}
+  .stat .num{font-size:30px;font-weight:700}
+  .stat .lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-top:3px}
+  .content{padding:24px 40px;max-width:1200px;margin:0 auto}
+  .tc-card{background:white;border-radius:10px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.08);overflow:hidden}
+  .tc-header{display:flex;align-items:center;padding:14px 18px;cursor:pointer;gap:12px;border-left:4px solid transparent}
+  .tc-header:hover{background:#fafafa}
+  .tc-header.PASS{border-left-color:#43a047}
+  .tc-header.FAIL{border-left-color:#e53935}
+  .tc-header.ERROR{border-left-color:#f57c00}
+  .tc-header.SKIP{border-left-color:#fdd835}
+  .badge{padding:3px 9px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;flex-shrink:0}
+  .badge-PASS{background:#e8f5e9;color:#2e7d32}
+  .badge-FAIL{background:#ffebee;color:#c62828}
+  .badge-ERROR{background:#fff3e0;color:#e65100}
+  .badge-SKIP{background:#fff8e1;color:#f57f17}
+  .tc-name{font-weight:600;flex:1}
+  .tc-id{font-size:12px;color:#888;font-family:monospace}
+  .tc-meta{font-size:12px;color:#aaa;flex-shrink:0}
+  .steps{border-top:1px solid #f0f0f0}
+  .step-row{display:flex;align-items:flex-start;padding:8px 18px;border-bottom:1px solid #f5f5f5;font-size:13px;gap:8px}
+  .step-row:last-child{border-bottom:none}
+  .step-row.PASS{background:#fdfffd}
+  .step-row.FAIL{background:#fff6f6}
+  .step-row.SKIP{background:#fffde7}
+  .step-no{width:28px;font-weight:700;color:#ccc;flex-shrink:0;padding-top:1px}
+  .step-kw{width:140px;font-family:monospace;font-size:12px;font-weight:600;color:#555;flex-shrink:0;padding-top:1px}
+  .step-msg{flex:1;color:#444;word-break:break-word}
+  .step-time{color:#bbb;font-size:11px;flex-shrink:0;padding-top:2px}
+  .step-ss a{font-size:11px;color:#1565c0;text-decoration:none;padding:1px 6px;border:1px solid #1565c0;border-radius:3px}
+  .tc-details{display:none}
+  .tc-details.open{display:block}
+  .chevron{font-size:12px;color:#ccc;transition:transform .2s;flex-shrink:0}
+  .tc-details.open + .tc-header .chevron{transform:rotate(90deg)}
+  footer{text-align:center;padding:20px;color:#aaa;font-size:12px;margin-top:10px}
+  @media(max-width:600px){.content{padding:12px}.summary{padding:12px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>KWAF — Test Execution Report</h1>
+  <p>Suite: Verification Run &nbsp;&bull;&nbsp; Generated: 2026-04-12 15:29:49</p>
+</header>
+<div class="summary">
+  <div class="stat s-total"><div class="num">2</div><div class="lbl">Total</div></div>
+  <div class="stat s-pass"><div class="num">1</div><div class="lbl">Passed</div></div>
+  <div class="stat s-fail"><div class="num">1</div><div class="lbl">Failed</div></div>
+  <div class="stat s-skip"><div class="num">0</div><div class="lbl">Skipped</div></div>
+</div>
+<div class="content">
+
+<div class="tc-card">
+  <div class="tc-header PASS" onclick="toggle('tc_1')">
+    <span class="chevron">&#9654;</span>
+    <span class="badge badge-PASS">PASS</span>
+    <span class="tc-id">TC_PASS</span>
+    <span class="tc-name">A Passing Test</span>
+    <span class="tc-meta">2 steps &nbsp;&bull;&nbsp; 0.0s</span>
+  </div>
+  <div class="tc-details" id="tc_1">
+    <div class="steps">
+    
+    <div class="step-row PASS">
+      <span class="step-no">#1</span>
+      <span class="step-kw">NAVIGATE</span>
+      <span class="step-msg">Navigated OK</span>
+      
+      <span class="step-time">120.5ms</span>
+    </div>
+    
+    <div class="step-row PASS">
+      <span class="step-no">#2</span>
+      <span class="step-kw">CLICK</span>
+      <span class="step-msg">Clicked OK</span>
+      
+      <span class="step-time">45.3ms</span>
+    </div>
+    
+    
+    </div>
+  </div>
+</div>
+
+<div class="tc-card">
+  <div class="tc-header FAIL" onclick="toggle('tc_2')">
+    <span class="chevron">&#9654;</span>
+    <span class="badge badge-FAIL">FAIL</span>
+    <span class="tc-id">TC_FAIL</span>
+    <span class="tc-name">A Failing Test</span>
+    <span class="tc-meta">2 steps &nbsp;&bull;&nbsp; 0.0s</span>
+  </div>
+  <div class="tc-details" id="tc_2">
+    <div class="steps">
+    
+    <div class="step-row PASS">
+      <span class="step-no">#1</span>
+      <span class="step-kw">NAVIGATE</span>
+      <span class="step-msg">Navigated OK</span>
+      
+      <span class="step-time">110.2ms</span>
+    </div>
+    
+    <div class="step-row FAIL">
+      <span class="step-no">#2</span>
+      <span class="step-kw">CLICK</span>
+      <span class="step-msg">Element not found</span>
+      
+      <span class="step-time">5001.0ms</span>
+    </div>
+    
+    
+    <div class="step-row FAIL">
+      <span class="step-no">ERR</span>
+      <span class="step-kw">ERROR</span>
+      <span class="step-msg" style="color:#c62828">Element not found</span>
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+</div>
+<footer>KWAF Automation Framework &nbsp;&bull;&nbsp; Phase 1 &nbsp;&bull;&nbsp; 2026-04-12 15:29:49</footer>
+<script>
+function toggle(id){
+  const el=document.getElementById(id);
+  el.classList.toggle('open');
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.badge-FAIL,.badge-ERROR').forEach(function(b){
+    const card=b.closest('.tc-card');
+    if(card){
+      const details=card.querySelector('.tc-details');
+      if(details) details.classList.add('open');
+    }
+  });
+});
+</script>
+</body>
+</html>

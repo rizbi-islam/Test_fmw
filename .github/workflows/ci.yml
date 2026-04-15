@@ -1,0 +1,87 @@
+# ─────────────────────────────────────────────────────────────
+# KWAF — GitHub Actions CI Pipeline
+# Triggers: every push and pull request to main/develop
+#
+# What it does:
+#   1. Installs dependencies
+#   2. Runs Phase 1 + 2 + 3 verifications
+#   3. Creates Excel template
+#   4. Runs test suite headless (Playwright)
+#   5. Uploads HTML report as artifact
+# ─────────────────────────────────────────────────────────────
+
+name: KWAF CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:          # allow manual trigger from GitHub UI
+
+jobs:
+  verify-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      # ── Checkout ───────────────────────────────────────────
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # ── Python Setup ───────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      # ── Install Dependencies ───────────────────────────────
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # ── Playwright Browser ─────────────────────────────────
+      - name: Install Playwright browsers
+        run: playwright install chromium --with-deps
+
+      # ── Create Test Template ───────────────────────────────
+      - name: Create Excel test template
+        run: python assets/templates/create_template.py
+
+      # ── Phase 1 Verification ───────────────────────────────
+      - name: Run Phase 1 verification
+        run: python tests/verify_phase1.py
+
+      # ── Phase 2 Verification ───────────────────────────────
+      - name: Run Phase 2 verification
+        run: python tests/verify_phase2.py
+
+      # ── Phase 3 Verification ───────────────────────────────
+      - name: Run Phase 3 verification
+        run: python tests/verify_phase3.py
+
+      # ── Smoke Test Run ─────────────────────────────────────
+      - name: Run test suite (Playwright headless)
+        run: python run.py --driver playwright --headless
+        continue-on-error: true   # don't fail CI if tests fail — just report
+
+      # ── Upload Report ──────────────────────────────────────
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v4
+        if: always()              # upload even if tests failed
+        with:
+          name: kwaf-test-report-${{ github.run_number }}
+          path: reports/output/*.html
+          retention-days: 30
+
+      # ── Upload Screenshots ─────────────────────────────────
+      - name: Upload failure screenshots
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kwaf-screenshots-${{ github.run_number }}
+          path: assets/screenshots/
+          retention-days: 7
+          if-no-files-found: ignore

@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+
+  # ── Run tests headless ──────────────────────────────────────
+  kwaf-runner:
+    build: .
+    container_name: kwaf_runner
+    volumes:
+      - ./assets:/app/assets          # test suite Excel + screenshots
+      - ./reports:/app/reports        # HTML reports out
+      - ./logs:/app/logs              # execution logs
+      - ./config:/app/config          # config.yaml
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    command: python run.py --headless
+    profiles: ["run"]
+
+  # ── Launch Streamlit UI ─────────────────────────────────────
+  kwaf-ui:
+    build: .
+    container_name: kwaf_ui
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./assets:/app/assets
+      - ./reports:/app/reports
+      - ./logs:/app/logs
+      - ./config:/app/config
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    command: >
+      streamlit run ui/app.py
+      --server.address=0.0.0.0
+      --server.port=8501
+      --server.headless=true
+    profiles: ["ui"]
+
+  # ── Run parallel tests ──────────────────────────────────────
+  kwaf-parallel:
+    build: .
+    container_name: kwaf_parallel
+    volumes:
+      - ./assets:/app/assets
+      - ./reports:/app/reports
+      - ./logs:/app/logs
+      - ./config:/app/config
+    environment:
+      - PYTHONPATH=/app
+    command: python run.py --headless --parallel --workers 4
+    profiles: ["parallel"]

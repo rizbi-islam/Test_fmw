@@ -1,0 +1,182 @@
+Folder PATH listing for volume New Volume
+Volume serial number is 989C-72DB
+E:.
+|   conftest.py
+|   instructions.md
+|   PROGRESS.md
+|   README.md
+|   requirements.txt
+|   run.py
+|   structure.txt
+|   
++---.sixth
+|   \---skills
++---assets
+|   +---data
+|   +---screenshots
+|   \---templates
+|           create_template.py
+|           test_suite.xlsx
+|           
++---config
+|       config.yaml
+|       
++---core
+|   |   __init__.py
+|   |   
+|   +---captcha
+|   |   |   base_captcha.py
+|   |   |   bypass_captcha.py
+|   |   |   captcha_factory.py
+|   |   |   manual_pause_captcha.py
+|   |   |   twocaptcha_solver.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           base_captcha.cpython-313.pyc
+|   |           bypass_captcha.cpython-313.pyc
+|   |           captcha_factory.cpython-313.pyc
+|   |           manual_pause_captcha.cpython-313.pyc
+|   |           twocaptcha_solver.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---data
+|   |   |   base_provider.py
+|   |   |   data_factory.py
+|   |   |   excel_provider.py
+|   |   |   json_provider.py
+|   |   |   mysql_provider.py
+|   |   |   sqlite_provider.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           base_provider.cpython-313.pyc
+|   |           data_factory.cpython-313.pyc
+|   |           excel_provider.cpython-313.pyc
+|   |           json_provider.cpython-313.pyc
+|   |           mysql_provider.cpython-313.pyc
+|   |           sqlite_provider.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---drivers
+|   |   |   base_driver.py
+|   |   |   driver_factory.py
+|   |   |   playwright_driver.py
+|   |   |   selenium_driver.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           base_driver.cpython-313.pyc
+|   |           driver_factory.cpython-313.pyc
+|   |           playwright_driver.cpython-313.pyc
+|   |           selenium_driver.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---flow
+|   |   |   flow_context.py
+|   |   |   flow_executor.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           flow_context.cpython-313.pyc
+|   |           flow_executor.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---keywords
+|   |   |   base_keyword.py
+|   |   |   keyword_executor.py
+|   |   |   keyword_registry.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---actions
+|   |   |   |   assert_keyword.py
+|   |   |   |   captcha_keyword.py
+|   |   |   |   clear.py
+|   |   |   |   click.py
+|   |   |   |   close_browser.py
+|   |   |   |   get_text.py
+|   |   |   |   hover.py
+|   |   |   |   navigate.py
+|   |   |   |   otp_keyword.py
+|   |   |   |   screenshot.py
+|   |   |   |   scroll.py
+|   |   |   |   select.py
+|   |   |   |   sleep.py
+|   |   |   |   switch_frame.py
+|   |   |   |   type_text.py
+|   |   |   |   verify_url.py
+|   |   |   |   wait.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           assert_keyword.cpython-313.pyc
+|   |   |           captcha_keyword.cpython-313.pyc
+|   |   |           clear.cpython-313.pyc
+|   |   |           click.cpython-313.pyc
+|   |   |           close_browser.cpython-313.pyc
+|   |   |           get_text.cpython-313.pyc
+|   |   |           hover.cpython-313.pyc
+|   |   |           navigate.cpython-313.pyc
+|   |   |           otp_keyword.cpython-313.pyc
+|   |   |           screenshot.cpython-313.pyc
+|   |   |           scroll.cpython-313.pyc
+|   |   |           select.cpython-313.pyc
+|   |   |           sleep.cpython-313.pyc
+|   |   |           switch_frame.cpython-313.pyc
+|   |   |           type_text.cpython-313.pyc
+|   |   |           verify_url.cpython-313.pyc
+|   |   |           wait.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           base_keyword.cpython-313.pyc
+|   |           keyword_executor.cpython-313.pyc
+|   |           keyword_registry.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---reports
+|   |   |   base_reporter.py
+|   |   |   html_reporter.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           base_reporter.cpython-313.pyc
+|   |           html_reporter.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---test_cases
+|   |   |   excel_parser.py
+|   |   |   test_case_model.py
+|   |   |   test_case_registry.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           excel_parser.cpython-313.pyc
+|   |           test_case_model.cpython-313.pyc
+|   |           test_case_registry.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   \---__pycache__
+|           __init__.cpython-313.pyc
+|           
++---data
++---logs
+|       kwaf_2026-04-12_10-49-27_315879.log
+|       kwaf_2026-04-12_10-50-46_498354.log
+|       kwaf_2026-04-12_10-51-00_042012.log
+|       
++---plugins
++---reports
+|   \---output
+|           report_Excel_Test_Suite_20260412_105106.html
+|           report_Verification_Run_20260412_104926.html
+|           
++---tests
+|       verify_phase1.py
+|       verify_phase2.py
+|       
+\---{core
+    \---{drivers,keywords
+        \---actions,test_cases,data,flow,reports},config,assets
+            \---templates,tests,reports
+                \---output,logs,plugins}

@@ -1,0 +1,43 @@
+# -----------------------------------------
+# KWAF Master Configuration - Phase 1
+# -----------------------------------------
+
+framework:
+  name: "KWAF"
+  version: "1.0.0"
+  log_level: "DEBUG"           # DEBUG | INFO | WARNING | ERROR
+  screenshot_on_failure: true
+  screenshot_dir: "assets/screenshots"
+
+driver:
+  default: "selenium"          # selenium | playwright | mobile | api
+  browser: "chrome"            # chrome | firefox | edge
+  headless: false
+  implicit_wait: 10
+  page_load_timeout: 30
+  window_size: "1920,1080"
+  remote_url: null
+
+data:
+  default_provider: "excel"
+  excel:
+    test_suite_path: "assets/templates/test_suite.xlsx"
+    data_sheet: "TestData"
+    suite_sheet: "TestSuite"
+
+reports:
+  output_dir: "reports/output"
+  html: true
+  pdf: false
+  excel: false
+  allure_results_dir: "allure-results"
+
+execution:
+  mode: "sequential"           # sequential | parallel
+  parallel_workers: 2
+  retry_on_failure: 1
+  stop_on_first_failure: false
+
+environment:
+  name: "local"                # local | staging | production
+  base_url: ""

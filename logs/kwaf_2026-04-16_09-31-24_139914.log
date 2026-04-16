@@ -1,0 +1,167 @@
+2026-04-16 09:31:24.220 | INFO     | run_module:_run_parallel:144 - [Parallel] Running 3 tests with 2 workers
+2026-04-16 09:31:24.933 | DEBUG    | core.drivers.driver_factory:register:22 - [DriverFactory] Registered driver: 'selenium'
+2026-04-16 09:31:24.933 | DEBUG    | core.drivers.driver_factory:register:22 - [DriverFactory] Registered driver: 'playwright'
+2026-04-16 09:31:24.933 | DEBUG    | core.drivers.driver_factory:register:22 - [DriverFactory] Registered driver: 'selenium'
+2026-04-16 09:31:24.933 | DEBUG    | core.drivers.driver_factory:register:22 - [DriverFactory] Registered driver: 'playwright'
+2026-04-16 09:31:24.933 | INFO     | core.drivers.driver_factory:get:35 - [DriverFactory] Creating driver: 'selenium'
+2026-04-16 09:31:24.934 | INFO     | core.drivers.driver_factory:get:35 - [DriverFactory] Creating driver: 'selenium'
+2026-04-16 09:31:24.935 | INFO     | core.drivers.selenium_driver:start:47 - [SeleniumDriver] Starting chrome | headless=True
+2026-04-16 09:31:24.935 | INFO     | core.drivers.selenium_driver:start:47 - [SeleniumDriver] Starting chrome | headless=True
+2026-04-16 09:31:26.530 | ERROR    | core.flow.flow_executor:_run_single:97 - [FlowExecutor] Fatal error in TC_PAR_1: [WinError 193] %1 is not a valid Win32 application
+Traceback (most recent call last):
+
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1015, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1044, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 995, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 93, in _worker
+    work_item.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+
+> File "E:\kwaf_phase1 (1)\kwaf\core\flow\flow_executor.py", line 93, in _run_single
+    driver.start()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 48, in start
+    self.driver = self._build_driver()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 74, in _build_driver
+    return build_fn()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 85, in _build_chrome
+    return webdriver.Chrome(service=service, options=options)
+
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\chromium\webdriver.py", line 50, in __init__
+    self.service.start()
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\common\service.py", line 98, in start
+    self._start_process(self._path)
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\common\service.py", line 208, in _start_process
+    self.process = subprocess.Popen(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1554, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+
+OSError: [WinError 193] %1 is not a valid Win32 application
+2026-04-16 09:31:26.529 | ERROR    | core.flow.flow_executor:_run_single:97 - [FlowExecutor] Fatal error in TC_PAR_2: [WinError 193] %1 is not a valid Win32 application
+Traceback (most recent call last):
+
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1015, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1044, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 995, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 93, in _worker
+    work_item.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+
+> File "E:\kwaf_phase1 (1)\kwaf\core\flow\flow_executor.py", line 93, in _run_single
+    driver.start()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 48, in start
+    self.driver = self._build_driver()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 74, in _build_driver
+    return build_fn()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 85, in _build_chrome
+    return webdriver.Chrome(service=service, options=options)
+
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\chromium\webdriver.py", line 50, in __init__
+    self.service.start()
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\common\service.py", line 98, in start
+    self._start_process(self._path)
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\common\service.py", line 208, in _start_process
+    self.process = subprocess.Popen(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1554, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+
+OSError: [WinError 193] %1 is not a valid Win32 application
+2026-04-16 09:31:26.542 | INFO     | core.drivers.driver_factory:get:35 - [DriverFactory] Creating driver: 'selenium'
+2026-04-16 09:31:26.543 | INFO     | run_module:_run_parallel:160 - [Parallel] TC_PAR_1: FAILED (0.0s)
+2026-04-16 09:31:26.544 | INFO     | core.drivers.selenium_driver:start:47 - [SeleniumDriver] Starting chrome | headless=True
+2026-04-16 09:31:26.544 | INFO     | run_module:_run_parallel:160 - [Parallel] TC_PAR_2: FAILED (0.0s)
+2026-04-16 09:31:27.631 | ERROR    | core.flow.flow_executor:_run_single:97 - [FlowExecutor] Fatal error in TC_PAR_3: [WinError 193] %1 is not a valid Win32 application
+Traceback (most recent call last):
+
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1015, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1044, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 995, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 93, in _worker
+    work_item.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+
+> File "E:\kwaf_phase1 (1)\kwaf\core\flow\flow_executor.py", line 93, in _run_single
+    driver.start()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 48, in start
+    self.driver = self._build_driver()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 74, in _build_driver
+    return build_fn()
+
+  File "E:\kwaf_phase1 (1)\kwaf\core\drivers\selenium_driver.py", line 85, in _build_chrome
+    return webdriver.Chrome(service=service, options=options)
+
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\chromium\webdriver.py", line 50, in __init__
+    self.service.start()
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\common\service.py", line 98, in start
+    self._start_process(self._path)
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\selenium\webdriver\common\service.py", line 208, in _start_process
+    self.process = subprocess.Popen(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1554, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+
+OSError: [WinError 193] %1 is not a valid Win32 application
+2026-04-16 09:31:27.634 | INFO     | run_module:_run_parallel:160 - [Parallel] TC_PAR_3: FAILED (0.0s)
+2026-04-16 09:31:27.635 | INFO     | core.flow.flow_executor:_print_summary:112 - 
+############################################################
+2026-04-16 09:31:27.635 | INFO     | core.flow.flow_executor:_print_summary:113 -   SUITE RESULT : Parallel Suite
+2026-04-16 09:31:27.636 | INFO     | core.flow.flow_executor:_print_summary:114 -   Passed  : 0
+2026-04-16 09:31:27.636 | INFO     | core.flow.flow_executor:_print_summary:115 -   Failed  : 0
+2026-04-16 09:31:27.636 | INFO     | core.flow.flow_executor:_print_summary:116 -   Skipped : 0
+2026-04-16 09:31:27.637 | INFO     | core.flow.flow_executor:_print_summary:117 -   Total   : 3
+2026-04-16 09:31:27.637 | INFO     | core.flow.flow_executor:_print_summary:118 - ############################################################
+
+2026-04-16 09:31:27.654 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'ASSERT_TEXT'
+2026-04-16 09:31:27.654 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'ASSERT_URL'
+2026-04-16 09:31:27.654 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'ASSERT_VISIBLE'
+2026-04-16 09:31:27.655 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'HANDLE_CAPTCHA'
+2026-04-16 09:31:27.655 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'CLEAR'
+2026-04-16 09:31:27.656 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'CLICK'
+2026-04-16 09:31:27.656 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'CLOSE_BROWSER'
+2026-04-16 09:31:27.657 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'GET_TEXT'
+2026-04-16 09:31:27.657 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'HOVER'
+2026-04-16 09:31:27.658 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'NAVIGATE'
+2026-04-16 09:31:27.658 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'HANDLE_OTP'
+2026-04-16 09:31:27.659 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'SCREENSHOT'
+2026-04-16 09:31:27.659 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'SCROLL_TO'
+2026-04-16 09:31:27.660 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'SELECT'
+2026-04-16 09:31:27.661 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'SLEEP'
+2026-04-16 09:31:27.662 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'SWITCH_DEFAULT'
+2026-04-16 09:31:27.662 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'SWITCH_FRAME'
+2026-04-16 09:31:27.662 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'TYPE'
+2026-04-16 09:31:27.663 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'VERIFY_URL'
+2026-04-16 09:31:27.664 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'WAIT_FOR'
+2026-04-16 09:31:27.664 | INFO     | core.keywords.keyword_registry:_auto_discover:48 - [KeywordRegistry] Registered 20 keywords: ['ASSERT_TEXT', 'ASSERT_URL', 'ASSERT_VISIBLE', 'CLEAR', 'CLICK', 'CLOSE_BROWSER', 'GET_TEXT', 'HANDLE_CAPTCHA', 'HANDLE_OTP', 'HOVER', 'NAVIGATE', 'SCREENSHOT', 'SCROLL_TO', 'SELECT', 'SLEEP', 'SWITCH_DEFAULT', 'SWITCH_FRAME', 'TYPE', 'VERIFY_URL', 'WAIT_FOR']
+2026-04-16 09:31:27.668 | DEBUG    | core.otp.otp_factory:register:17 - [OTPFactory] Registered: 'mock'
+2026-04-16 09:31:27.668 | DEBUG    | core.otp.otp_factory:register:17 - [OTPFactory] Registered: 'firebase'
+2026-04-16 09:31:27.668 | DEBUG    | core.otp.otp_factory:register:17 - [OTPFactory] Registered: 'gmail'

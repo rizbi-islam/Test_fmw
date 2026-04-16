@@ -10,7 +10,7 @@ framework:
   screenshot_dir: "assets/screenshots"
 
 driver:
-  default: "selenium"          # selenium | playwright | mobile | api
+  default: "playwright"          # selenium | playwright | mobile | api
   browser: "chrome"            # chrome | firefox | edge
   headless: false
   implicit_wait: 10

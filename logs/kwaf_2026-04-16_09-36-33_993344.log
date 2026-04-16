@@ -1,0 +1,125 @@
+2026-04-16 09:36:34.376 | INFO     | core.test_cases.excel_parser:parse:28 - [ExcelParser] Parsing: assets/templates/test_suite.xlsx | Sheet: TestSuite
+2026-04-16 09:36:34.385 | SUCCESS  | core.test_cases.excel_parser:parse:43 - [ExcelParser] Parsed 3 test cases (2 enabled)
+2026-04-16 09:36:34.386 | INFO     | core.test_cases.test_case_registry:register_suite:30 - [TestCaseRegistry] Registered suite 'Excel Test Suite' with 3 test cases.
+2026-04-16 09:36:34.399 | INFO     | __main__:_run_parallel:144 - [Parallel] Running 2 tests with 2 workers
+2026-04-16 09:36:35.183 | DEBUG    | core.drivers.driver_factory:register:22 - [DriverFactory] Registered driver: 'selenium'
+2026-04-16 09:36:35.184 | DEBUG    | core.drivers.driver_factory:register:22 - [DriverFactory] Registered driver: 'playwright'
+2026-04-16 09:36:35.184 | DEBUG    | core.drivers.driver_factory:register:22 - [DriverFactory] Registered driver: 'selenium'
+2026-04-16 09:36:35.185 | DEBUG    | core.drivers.driver_factory:register:22 - [DriverFactory] Registered driver: 'playwright'
+2026-04-16 09:36:35.184 | INFO     | core.drivers.driver_factory:get:35 - [DriverFactory] Creating driver: 'playwright'
+2026-04-16 09:36:35.185 | INFO     | core.drivers.driver_factory:get:35 - [DriverFactory] Creating driver: 'playwright'
+2026-04-16 09:36:35.185 | INFO     | core.drivers.playwright_driver:start:25 - [PlaywrightDriver] Starting chrome | headless=True
+2026-04-16 09:36:35.186 | INFO     | core.drivers.playwright_driver:start:25 - [PlaywrightDriver] Starting chrome | headless=True
+2026-04-16 09:36:36.222 | SUCCESS  | core.drivers.playwright_driver:start:41 - [PlaywrightDriver] Browser started.
+2026-04-16 09:36:36.224 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'ASSERT_TEXT'
+2026-04-16 09:36:36.224 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'ASSERT_URL'
+2026-04-16 09:36:36.224 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'ASSERT_VISIBLE'
+2026-04-16 09:36:36.225 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'HANDLE_CAPTCHA'
+2026-04-16 09:36:36.225 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'CLEAR'
+2026-04-16 09:36:36.226 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'CLICK'
+2026-04-16 09:36:36.227 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'CLOSE_BROWSER'
+2026-04-16 09:36:36.228 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'GET_TEXT'
+2026-04-16 09:36:36.229 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'HOVER'
+2026-04-16 09:36:36.230 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'NAVIGATE'
+2026-04-16 09:36:36.230 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'HANDLE_OTP'
+2026-04-16 09:36:36.231 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'SCREENSHOT'
+2026-04-16 09:36:36.232 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'SCROLL_TO'
+2026-04-16 09:36:36.232 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'SELECT'
+2026-04-16 09:36:36.233 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'SLEEP'
+2026-04-16 09:36:36.234 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'SWITCH_DEFAULT'
+2026-04-16 09:36:36.234 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'SWITCH_FRAME'
+2026-04-16 09:36:36.235 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'TYPE'
+2026-04-16 09:36:36.236 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'VERIFY_URL'
+2026-04-16 09:36:36.236 | DEBUG    | core.keywords.keyword_registry:register:55 - [KeywordRegistry] Registered: 'WAIT_FOR'
+2026-04-16 09:36:36.236 | INFO     | core.keywords.keyword_registry:_auto_discover:48 - [KeywordRegistry] Registered 20 keywords: ['ASSERT_TEXT', 'ASSERT_URL', 'ASSERT_VISIBLE', 'CLEAR', 'CLICK', 'CLOSE_BROWSER', 'GET_TEXT', 'HANDLE_CAPTCHA', 'HANDLE_OTP', 'HOVER', 'NAVIGATE', 'SCREENSHOT', 'SCROLL_TO', 'SELECT', 'SLEEP', 'SWITCH_DEFAULT', 'SWITCH_FRAME', 'TYPE', 'VERIFY_URL', 'WAIT_FOR']
+2026-04-16 09:36:36.237 | INFO     | core.keywords.keyword_executor:run:97 - 
+============================================================
+2026-04-16 09:36:36.237 | INFO     | core.keywords.keyword_executor:run:98 -   Running: TC001 - Google_Search_Test
+2026-04-16 09:36:36.238 | INFO     | core.keywords.keyword_executor:run:99 - ============================================================
+2026-04-16 09:36:36.238 | DEBUG    | core.keywords.keyword_executor:_execute_step:136 -   Step 01 | NAVIGATE | params={'locator': '', 'strategy': 'css', 'value': 'https://www.google.com', 'timeout': 10, 'data_source': '', 'description': ''}
+2026-04-16 09:36:36.238 | DEBUG    | core.drivers.playwright_driver:navigate:66 - [PlaywrightDriver] Navigate -> https://www.google.com
+2026-04-16 09:36:36.246 | SUCCESS  | core.drivers.playwright_driver:start:41 - [PlaywrightDriver] Browser started.
+2026-04-16 09:36:36.246 | INFO     | core.keywords.keyword_executor:run:97 - 
+============================================================
+2026-04-16 09:36:36.247 | INFO     | core.keywords.keyword_executor:run:98 -   Running: TC002 - Example_Title_Test
+2026-04-16 09:36:36.248 | INFO     | core.keywords.keyword_executor:run:99 - ============================================================
+2026-04-16 09:36:36.248 | DEBUG    | core.keywords.keyword_executor:_execute_step:136 -   Step 01 | NAVIGATE | params={'locator': '', 'strategy': 'css', 'value': 'https://example.com', 'timeout': 10, 'data_source': '', 'description': ''}
+2026-04-16 09:36:36.248 | DEBUG    | core.drivers.playwright_driver:navigate:66 - [PlaywrightDriver] Navigate -> https://example.com
+2026-04-16 09:36:36.315 | DEBUG    | core.flow.flow_context:set:34 - [FlowContext] Set 'current_url' = 'https://example.com/'
+2026-04-16 09:36:36.315 | INFO     | core.keywords.keyword_executor:_execute_step:158 -   [OK] Step 01 [NAVIGATE] - Navigated to: https://example.com
+2026-04-16 09:36:36.315 | DEBUG    | core.keywords.keyword_executor:_execute_step:136 -   Step 02 | ASSERT_TEXT | params={'locator': 'h1', 'strategy': 'css', 'value': 'Example Domain', 'timeout': 5, 'data_source': '', 'description': ''}
+2026-04-16 09:36:36.355 | INFO     | core.keywords.keyword_executor:_execute_step:158 -   [OK] Step 02 [ASSERT_TEXT] - ASSERT_TEXT passed. Expected='Example Domain' in Actual='Example Domain'
+2026-04-16 09:36:36.355 | DEBUG    | core.keywords.keyword_executor:_execute_step:136 -   Step 03 | ASSERT_URL | params={'locator': '', 'strategy': 'css', 'value': 'example.com', 'timeout': 5, 'data_source': '', 'description': ''}
+2026-04-16 09:36:36.356 | INFO     | core.keywords.keyword_executor:_execute_step:158 -   [OK] Step 03 [ASSERT_URL] - URL contains 'example.com'. Current: https://example.com/
+2026-04-16 09:36:36.356 | DEBUG    | core.keywords.keyword_executor:_execute_step:136 -   Step 04 | SCREENSHOT | params={'locator': '', 'strategy': 'css', 'value': 'example_result.png', 'timeout': 5, 'data_source': '', 'description': ''}
+2026-04-16 09:36:36.500 | INFO     | core.drivers.playwright_driver:screenshot:130 - [PlaywrightDriver] Screenshot -> assets/screenshots\example_result.png
+2026-04-16 09:36:36.500 | INFO     | core.keywords.keyword_executor:_execute_step:158 -   [OK] Step 04 [SCREENSHOT] - Screenshot saved: assets/screenshots\example_result.png
+2026-04-16 09:36:36.501 | SUCCESS  | core.keywords.keyword_executor:run:124 -   PASSED: TC002 (0.25s)
+2026-04-16 09:36:36.578 | INFO     | core.drivers.playwright_driver:quit:53 - [PlaywrightDriver] Browser closed.
+2026-04-16 09:36:36.579 | INFO     | __main__:_run_parallel:160 - [Parallel] TC002: PASSED (0.25s)
+2026-04-16 09:36:37.781 | DEBUG    | core.flow.flow_context:set:34 - [FlowContext] Set 'current_url' = 'https://www.google.com/'
+2026-04-16 09:36:37.781 | INFO     | core.keywords.keyword_executor:_execute_step:158 -   [OK] Step 01 [NAVIGATE] - Navigated to: https://www.google.com
+2026-04-16 09:36:37.781 | DEBUG    | core.keywords.keyword_executor:_execute_step:136 -   Step 02 | WAIT_FOR | params={'locator': 'input[name=q]', 'strategy': 'css', 'value': '', 'timeout': 10, 'data_source': '', 'description': ''}
+2026-04-16 09:36:47.802 | ERROR    | core.keywords.base_keyword:_fail:49 - [WAIT_FOR] FAIL - Wait timeout (10s) for [css] input[name=q]: Locator.wait_for: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("input[name=q]").first to be visible
+
+2026-04-16 09:36:47.902 | INFO     | core.drivers.playwright_driver:screenshot:130 - [PlaywrightDriver] Screenshot -> assets/screenshots\FAIL_02_WAIT_FOR_20260416_093647.png
+2026-04-16 09:36:47.903 | WARNING  | core.keywords.keyword_executor:_execute_step:154 -   Step 2 failed — retry 1/1
+2026-04-16 09:36:57.908 | ERROR    | core.keywords.base_keyword:_fail:49 - [WAIT_FOR] FAIL - Wait timeout (10s) for [css] input[name=q]: Locator.wait_for: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("input[name=q]").first to be visible
+
+2026-04-16 09:36:58.013 | INFO     | core.drivers.playwright_driver:screenshot:130 - [PlaywrightDriver] Screenshot -> assets/screenshots\FAIL_02_WAIT_FOR_20260416_093657.png
+2026-04-16 09:36:58.013 | INFO     | core.keywords.keyword_executor:_execute_step:158 -   [FAIL] Step 02 [WAIT_FOR] - Wait timeout (10s) for [css] input[name=q]: Locator.wait_for: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("input[name=q]").first to be visible
+
+2026-04-16 09:36:58.014 | DEBUG    | core.keywords.keyword_executor:_execute_step:136 -   Step 03 | TYPE | params={'locator': 'input[name=q]', 'strategy': 'css', 'value': 'KWAF automation', 'timeout': 5, 'data_source': '', 'description': ''}
+2026-04-16 09:37:28.030 | ERROR    | core.keywords.base_keyword:_fail:49 - [TYPE] FAIL - Type failed on [css] input[name=q]: Locator.clear: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=q]").first
+
+2026-04-16 09:37:28.154 | INFO     | core.drivers.playwright_driver:screenshot:130 - [PlaywrightDriver] Screenshot -> assets/screenshots\FAIL_03_TYPE_20260416_093728.png
+2026-04-16 09:37:28.176 | WARNING  | core.keywords.keyword_executor:_execute_step:154 -   Step 3 failed — retry 1/1
+2026-04-16 09:37:58.209 | ERROR    | core.keywords.base_keyword:_fail:49 - [TYPE] FAIL - Type failed on [css] input[name=q]: Locator.clear: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=q]").first
+
+2026-04-16 09:37:58.327 | INFO     | core.drivers.playwright_driver:screenshot:130 - [PlaywrightDriver] Screenshot -> assets/screenshots\FAIL_03_TYPE_20260416_093758.png
+2026-04-16 09:37:58.328 | INFO     | core.keywords.keyword_executor:_execute_step:158 -   [FAIL] Step 03 [TYPE] - Type failed on [css] input[name=q]: Locator.clear: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=q]").first
+
+2026-04-16 09:37:58.328 | DEBUG    | core.keywords.keyword_executor:_execute_step:136 -   Step 04 | SCREENSHOT | params={'locator': '', 'strategy': 'css', 'value': 'google_typed.png', 'timeout': 5, 'data_source': '', 'description': ''}
+2026-04-16 09:37:58.432 | INFO     | core.drivers.playwright_driver:screenshot:130 - [PlaywrightDriver] Screenshot -> assets/screenshots\google_typed.png
+2026-04-16 09:37:58.432 | INFO     | core.keywords.keyword_executor:_execute_step:158 -   [OK] Step 04 [SCREENSHOT] - Screenshot saved: assets/screenshots\google_typed.png
+2026-04-16 09:37:58.433 | DEBUG    | core.keywords.keyword_executor:_execute_step:136 -   Step 05 | ASSERT_VISIBLE | params={'locator': 'input[name=q]', 'strategy': 'css', 'value': '', 'timeout': 5, 'data_source': '', 'description': ''}
+2026-04-16 09:38:03.450 | ERROR    | core.keywords.base_keyword:_fail:49 - [ASSERT_VISIBLE] FAIL - Element NOT visible: [css] input[name=q]: Locator.wait_for: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("input[name=q]").first to be visible
+
+2026-04-16 09:38:03.583 | INFO     | core.drivers.playwright_driver:screenshot:130 - [PlaywrightDriver] Screenshot -> assets/screenshots\FAIL_05_ASSERT_VISIBLE_20260416_093803.png
+2026-04-16 09:38:03.584 | WARNING  | core.keywords.keyword_executor:_execute_step:154 -   Step 5 failed — retry 1/1
+2026-04-16 09:38:08.587 | ERROR    | core.keywords.base_keyword:_fail:49 - [ASSERT_VISIBLE] FAIL - Element NOT visible: [css] input[name=q]: Locator.wait_for: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("input[name=q]").first to be visible
+
+2026-04-16 09:38:08.734 | INFO     | core.drivers.playwright_driver:screenshot:130 - [PlaywrightDriver] Screenshot -> assets/screenshots\FAIL_05_ASSERT_VISIBLE_20260416_093808.png
+2026-04-16 09:38:08.735 | INFO     | core.keywords.keyword_executor:_execute_step:158 -   [FAIL] Step 05 [ASSERT_VISIBLE] - Element NOT visible: [css] input[name=q]: Locator.wait_for: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("input[name=q]").first to be visible
+
+2026-04-16 09:38:08.735 | ERROR    | core.keywords.keyword_executor:run:126 -   FAILED: TC001 (92.5s)
+2026-04-16 09:38:08.820 | INFO     | core.drivers.playwright_driver:quit:53 - [PlaywrightDriver] Browser closed.
+2026-04-16 09:38:08.820 | INFO     | __main__:_run_parallel:160 - [Parallel] TC001: FAILED (92.5s)
+2026-04-16 09:38:08.821 | INFO     | core.flow.flow_executor:_print_summary:112 - 
+############################################################
+2026-04-16 09:38:08.821 | INFO     | core.flow.flow_executor:_print_summary:113 -   SUITE RESULT : Parallel Suite
+2026-04-16 09:38:08.822 | INFO     | core.flow.flow_executor:_print_summary:114 -   Passed  : 1
+2026-04-16 09:38:08.822 | INFO     | core.flow.flow_executor:_print_summary:115 -   Failed  : 1
+2026-04-16 09:38:08.822 | INFO     | core.flow.flow_executor:_print_summary:116 -   Skipped : 0
+2026-04-16 09:38:08.822 | INFO     | core.flow.flow_executor:_print_summary:117 -   Total   : 2
+2026-04-16 09:38:08.823 | INFO     | core.flow.flow_executor:_print_summary:118 - ############################################################
+
+2026-04-16 09:38:08.862 | SUCCESS  | core.reports.html_reporter:generate:163 - [HtmlReporter] Report -> reports/output\report_Parallel_Suite_20260416_093808.html

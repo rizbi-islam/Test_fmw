@@ -60,6 +60,8 @@ python tests\verify_phase3.py
 streamlit run ui\app.py --server.port=8502
 
 
+# Phase 4
+python run.py --headless --driver playwright --parallel --workers 4
 python tests\verify_phase4.py
 
 

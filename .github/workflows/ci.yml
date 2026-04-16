@@ -42,6 +42,7 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
+          
       # ── Playwright Browser ─────────────────────────────────
       - name: Install system dependencies for Playwright
         run: |

@@ -1,27 +1,15 @@
-# ─────────────────────────────────────────────────────────────
-# KWAF — GitHub Actions CI Pipeline
-# Triggers: every push and pull request to main/develop
-#
-# What it does:
-#   1. Installs dependencies
-#   2. Runs Phase 1 + 2 + 3 verifications
-#   3. Creates Excel template
-#   4. Runs test suite headless (Playwright)
-#   5. Uploads HTML report as artifact
-# ─────────────────────────────────────────────────────────────
-
 name: KWAF CI
 
-"on":
+on:
   push:
     branches: [ main, develop ]
   pull_request:
     branches: [ main, develop ]
-  workflow_dispatch:          # allow manual trigger from GitHub UI
+  workflow_dispatch:
 
 jobs:
   verify-and-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 30
 
     steps:
@@ -39,12 +27,12 @@ jobs:
       # ── Install Dependencies ───────────────────────────────
       - name: Install Python dependencies
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # ── Playwright Browser ─────────────────────────────────
+      # ── Install Playwright Browsers + OS deps ──────────────
       - name: Install Playwright browsers
-        run: playwright install chromium --with-deps
+        run: python -m playwright install --with-deps chromium
 
       # ── Create Test Template ───────────────────────────────
       - name: Create Excel test template
@@ -65,12 +53,12 @@ jobs:
       # ── Smoke Test Run ─────────────────────────────────────
       - name: Run test suite (Playwright headless)
         run: python run.py --driver playwright --headless
-        continue-on-error: true   # don't fail CI if tests fail — just report
+        continue-on-error: true
 
-      # ── Upload Report ──────────────────────────────────────
+      # ── Upload HTML Report ─────────────────────────────────
       - name: Upload HTML report
         uses: actions/upload-artifact@v4
-        if: always()              # upload even if tests failed
+        if: always()
         with:
           name: kwaf-test-report-${{ github.run_number }}
           path: reports/output/*.html

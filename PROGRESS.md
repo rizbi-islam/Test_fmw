@@ -9,28 +9,31 @@
 ## Phase 3 — Streamlit UI Dashboard
 ## Phase 3 STATUS: DONE (6/6 checks passed)
 
+## Phase 4 — Parallel + CI/CD + Docker
+## Phase 4 STATUS: DONE (8/8 checks passed)
+
 ---
 
-## Phase 4 — Parallel + CI/CD + Docker
+## Phase 5 — Reports + Inspector + Docs
 
-### Parallel Execution
-- [ ] run.py          — REPLACED (--parallel --workers N flags added)
+### Reports
+- [ ] core/reports/pdf_reporter.py
+- [ ] core/reports/excel_reporter.py
 
-### CI/CD
-- [ ] .github/workflows/ci.yml   — GitHub Actions pipeline
+### Inspector
+- [ ] core/inspector/__init__.py
+- [ ] core/inspector/site_inspector.py
 
-### Docker
-- [ ] Dockerfile
-- [ ] docker-compose.yml
-- [ ] .dockerignore
+### Templates
+- [ ] assets/templates/blank_template.py
+
+### Documentation
+- [ ] docs/KEYWORD_REFERENCE.md
+- [ ] docs/USER_GUIDE.md
 
 ### Verification
-- [ ] tests/verify_phase4.py
+- [ ] tests/verify_phase5.py
 
-## Phase 4 STATUS: NOT STARTED
-> Run: python tests/verify_phase4.py — all 8 checks must pass.
-
----
-
-## Phase 5 — Polish + Docs
-> BLOCKED until Phase 4 STATUS = DONE
+## Phase 5 STATUS: NOT STARTED
+> Run: python tests/verify_phase5.py — all 8 checks must pass.
+> This is the FINAL phase.
